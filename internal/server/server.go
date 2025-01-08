@@ -10,6 +10,17 @@ import (
 
 func Start() {
 
+	staticFiles := map[string]string{
+		"/manifest.json": "./static/manifest.json",
+		"/robots.txt":    "./static/robots.txt",
+		"/sitemap.xml":   "./static/sitemap.xml",
+	}
+
+	for route, file := range staticFiles {
+
+		serveFile(route, file)
+	}
+
 	if err := http.ListenAndServe(env.ServerAddress(), nil); err != nil {
 
 		panic(err)
