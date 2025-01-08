@@ -1,7 +1,9 @@
 {
-	"name"        : "DummyAI",
-	"short_name"  : "DummyAI",
-	"description" : "Artificial intelligence for dummies",
-	"id"          : "/",
-	"start_url"   : "/"
+	"name"             : "DummyAI",
+	"short_name"       : "DummyAI",
+	"description"      : "Artificial intelligence for dummies",
+	"id"               : "/",
+	"start_url"        : "/",
+	"theme_color"      : "#161616",
+	"background_color" : "#161616"
 }
