@@ -14,9 +14,13 @@
 
 	<g fill = "#161616">
 
-		<circle />
+		<circle cx = "30%"
+				cy = "35%"
+				r  = "10%" />
 
-		<circle />
+		<circle cx = "70%"
+				cy = "35%"
+				r  = "10%" />
 
 		<rect />
 
