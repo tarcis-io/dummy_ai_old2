@@ -1,5 +1,7 @@
 {
 	"name"        : "DummyAI",
 	"short_name"  : "DummyAI",
-	"description" : "Artificial intelligence for dummies"
+	"description" : "Artificial intelligence for dummies",
+	"id"          : "/",
+	"start_url"   : "/"
 }
