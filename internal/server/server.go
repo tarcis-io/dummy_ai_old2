@@ -22,6 +22,10 @@ func Start() {
 		"/favicon_512_maskable.png": "./static/img/favicon/favicon_512_maskable.png",
 		"/logo.svg":                 "./static/img/logo/logo.svg",
 		"/logo_white.svg":           "./static/img/logo/logo_white.svg",
+		"/carbon.css":               "./static/lib/carbon/carbon.css",
+		"/carbon.js":                "./static/lib/carbon/carbon.js",
+		"/wasm_exec.js":             "./static/lib/wasm/wasm_exec.js",
+		"/wasm_start.js":            "./static/lib/wasm/wasm_start.js",
 	}
 
 	for route, file := range staticFiles {
