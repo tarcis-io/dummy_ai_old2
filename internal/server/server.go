@@ -54,6 +54,20 @@ func serveFile(route string, file string) {
 	})
 }
 
+func servePage(route string, wasmRoute string) {
+
+	http.HandleFunc(route, func(responseWriter http.ResponseWriter, request *http.Request) {
+
+		if request.URL.Path != route {
+
+			error404(responseWriter)
+			return
+		}
+
+		executeServerTemplate(responseWriter, wasmRoute)
+	})
+}
+
 func error404(responseWriter http.ResponseWriter) {
 
 	responseWriter.WriteHeader(http.StatusNotFound)
