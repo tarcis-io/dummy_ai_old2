@@ -52,14 +52,6 @@ func Start() {
 	serve()
 }
 
-func serve() {
-
-	if err := http.ListenAndServe(env.ServerAddress(), nil); err != nil {
-
-		panic(err)
-	}
-}
-
 func serveFile(route string, file string) {
 
 	http.HandleFunc(route, func(responseWriter http.ResponseWriter, request *http.Request) {
@@ -91,6 +83,14 @@ func error404(responseWriter http.ResponseWriter) {
 func executeServerTemplate(responseWriter http.ResponseWriter, wasmRoute string) {
 
 	if err := serverTemplate.Execute(responseWriter, wasmRoute); err != nil {
+
+		panic(err)
+	}
+}
+
+func serve() {
+
+	if err := http.ListenAndServe(env.ServerAddress(), nil); err != nil {
 
 		panic(err)
 	}
