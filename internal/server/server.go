@@ -49,6 +49,11 @@ func Start() {
 		servePage(route, wasmRoute)
 	}
 
+	serve()
+}
+
+func serve() {
+
 	if err := http.ListenAndServe(env.ServerAddress(), nil); err != nil {
 
 		panic(err)
