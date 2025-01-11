@@ -40,6 +40,15 @@ func Start() {
 		serveFile(route, file)
 	}
 
+	pages := map[string]string{
+		"/": "/index.wasm",
+	}
+
+	for route, wasmRoute := range pages {
+
+		servePage(route, wasmRoute)
+	}
+
 	if err := http.ListenAndServe(env.ServerAddress(), nil); err != nil {
 
 		panic(err)
