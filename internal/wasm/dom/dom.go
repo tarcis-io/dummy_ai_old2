@@ -4,6 +4,8 @@ import (
 	"syscall/js"
 )
 
-type DOM struct {
-	value js.Value
-}
+type (
+	DOM struct {
+		value js.Value
+	}
+)
