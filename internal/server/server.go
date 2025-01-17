@@ -35,9 +35,9 @@ func Start() {
 		"/index.wasm":               "./static/wasm/index.wasm",
 	}
 
-	for route, file := range staticFiles {
+	for route, staticFile := range staticFiles {
 
-		serveFile(route, file)
+		serveFile(route, staticFile)
 	}
 
 	pages := map[string]string{
