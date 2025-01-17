@@ -9,3 +9,10 @@ type (
 		value js.Value
 	}
 )
+
+func New(value js.Value) DOM {
+
+	return DOM{
+		value: value,
+	}
+}
